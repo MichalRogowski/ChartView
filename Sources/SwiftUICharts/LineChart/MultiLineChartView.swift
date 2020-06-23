@@ -77,6 +77,7 @@ public struct MultiLineChartView: View {
                 if(!self.showIndicatorDot){
                     VStack(alignment: .leading, spacing: 8){
                         Text(self.title)
+                            .lineLimit(2)
                             .font(.title)
                             .bold()
                             .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.textColor : self.style.textColor)
@@ -99,7 +100,6 @@ public struct MultiLineChartView: View {
                     }
                     .transition(.scale)
                 }
-                Spacer()
                 GeometryReader{ geometry in
                     ZStack{
                         ForEach(0..<self.data.count) { i in
