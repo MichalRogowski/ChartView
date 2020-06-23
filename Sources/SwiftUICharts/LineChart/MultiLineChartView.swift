@@ -77,10 +77,10 @@ public struct MultiLineChartView: View {
                 if(!self.showIndicatorDot){
                     VStack(alignment: .leading, spacing: 8){
                         Text(self.title)
-                            .lineLimit(2)
                             .font(.title)
                             .bold()
                             .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.textColor : self.style.textColor)
+                            .lineLimit(2)
                         if (self.legend != nil){
                             Text(self.legend!)
                                 .font(.callout)
